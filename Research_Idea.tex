@@ -1,0 +1,216 @@
+%\documentclass{article}
+%\usepackage[letterpaper,margin=2.1cm]{geometry}
+%\usepackage{xcolor}
+%\usepackage{fancyhdr}
+%\usepackage{tgschola} % or any other font package you like
+
+\documentclass[12pt]{article}
+\usepackage{extsizes}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsxtra}
+\usepackage{wasysym}
+\usepackage{isomath}
+\usepackage{mathtools}
+\usepackage{txfonts}
+\usepackage{upgreek}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{tensor}
+\usepackage{pifont}
+\usepackage[margin=15mm]{geometry}
+\definecolor{color-1}{rgb}{0.26,0.26,0.26}
+\definecolor{color-2}{rgb}{0.4,0.4,0.4}
+\usepackage{extsizes}
+\usepackage{tocbibind}
+\usepackage{float}
+\usepackage{flafter}
+\usepackage{xcolor}
+\usepackage{sectsty}
+\usepackage[font=small, skip=0pt]{caption}
+\usepackage{setspace}
+\setstretch{1.1}
+\usepackage{fancyhdr}
+
+\usepackage{nopageno}
+
+% Select the font
+\usepackage{charter}
+
+
+\usepackage[%
+square,        % for square brackets
+comma,         % use commas as separators
+numbers,       % for numerical citations;
+%sort           % orders multiple citations into the sequence in which they appear in the list of references;
+sort&compress % as sort but in addition multiple numerical citations
+% are compressed if possible (as 3-6, 15);
+]{natbib}
+
+\renewcommand{\bibfont}{\normalfont\footnotesize}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	citecolor = {blue}
+}
+
+
+
+
+
+
+
+\newcommand{\soptitle}{Reinforcement Learning Improves Edge Computing}
+\newcommand{\yourname}{Iman Rahmati}
+\newcommand{\youremail}{iman.rahmati@sharif.edu}
+\newcommand{\yourweb}{\href{https://imanrht.github.io}{imanrht.github.io}}
+
+\newcommand{\statement}[1]{\par\medskip
+	\underline{\textcolor{blue}{\textbf{#1:}}}\space
+}
+
+%\usepackage[
+%colorlinks,
+%breaklinks,
+%pdftitle={\yourname - \soptitle},
+%pdfauthor={\yourname},
+%urlcolor  = blue,
+%citecolor = blue,
+%anchorcolor = blue,
+%unicode
+%]{hyperref}
+
+
+\usepackage{setspace}
+\onehalfspacing
+
+\begin{document}
+	
+
+	
+%\pagestyle{fancy}
+%\fancyhf{}
+%\fancyhead[C]{%
+%	\footnotesize\sffamily\vspace{8mm}
+%	\textcolor{blue}{\href{mailto:iman.rahmati@sharif.edu}{Research Ideas, V0.1}}  \hfill
+%	\textcolor{blue}{\href{https://imanrht.github.io/assets/images/CV_ImanRahmati.pdf}{20 Sep. 2024\vspace{2mm}}}}
+%
+
+
+
+\begin{center} 
+	
+	
+	\vspace{-17mm}
+	
+	\large Iman Rahmati  \hfill Multi-Agent DRL for MEC\vspace{1mm} \hrule
+	
+	\vspace{-1mm}
+	
+	\textcolor{white}{i} \\ \LARGE Multi-Agent Deep Reinforcement Learning for Cooperative Resource Management in Partially Observable Mobile Edge Computing Environment \vspace{6mm}\\
+	
+\end{center}
+%	\hrule
+%	\vspace{0.5pt}
+%	\hrule height 1pt
+
+
+
+\vspace{-8mm}
+
+\begin{abstract}
+	\vspace{-2mm}
+	\noindent
+	Mobile edge computing often suffers from the dynamic and unknown nature of the environment such as time-varying conditions, heterogeneous devices, and frequent communication requests, imposing significant challenges on improving system performance. To meet the rapidly growing demands of computation-intensive and time-sensitive applications, Reinforcement learning \cite{mnih2015human} has been proposed as an effective tool to establish low-latency and energy-efficient networks. RL enables network entities to interact with the environment and learn an optimal decision-making policy, usually modeled as a Markov decision process \cite{puterman2014markov}.
+\end{abstract}
+
+
+
+	
+\vspace{4mm}
+
+\noindent\large\textbf{Introduction}
+
+\vspace{1.5mm}
+\normalsize
+
+Mobile Edge Computing is emerging as a promising paradigm to enhance the computational capacity of mobile devices by offloading tasks to nearby edge servers. This paradigm aims to reduce latency, energy consumption, and improve Quality of Experience (QoE) for end-users. However, one of the major challenges in MEC is the efficient decision-making process for computation offloading, considering the dynamic nature of the network, user demands, and limited resources. Traditional offloading strategies, which often rely on heuristic or single-agent models, fail to capture the com- plexity and stochastic nature of modern MEC systems. 
+
+
+	
+\vspace{8mm}
+
+\noindent\textbf{\large Motivation}
+
+\vspace{1.5mm}
+
+The rapid growth of mobile applications, such as augmented reality, real-time gaming, and high-definition video streaming, has placed significant demands on the computational resources of mobile devices. While the processing power of these devices has improved, there remain significant limitations in battery life, processing speed, and memory capacity. Mobile Edge Computing (MEC) has emerged as a solution, enabling computation offloading to nearby edge servers to alleviate the processing burden on mobile devices. However, the challenge lies in determining how and when to offload computational tasks efficiently, especially in a dynamic network environment with varying resources and user demands. The decision-making process becomes more complex with the presence of multiple devices competing for limited edge resources. Current solutions often employ heuristic or single-agent approaches, which are not robust in highly dynamic and multi-user MEC environments. Multi-Agent Deep Reinforcement Learning (DRL) offers a promising avenue for addressing this challenge. By allowing multiple agents (mobile devices and edge servers) to autonomously learn and adapt their offloading strategies, it becomes possible to optimize system-wide performance metrics such as energy consumption, latency, and resource utilization. 
+
+
+
+
+
+
+
+
+
+
+ Multiple agents interact with a shared or separate environment to achieve specific objectives. Each agent independently learns through trial and error while accounting for the actions and policies of other agents. In mobile edge computing, each device might be an agent trying to optimize its own computation offloading strategy while considering the resource usage and strategies of other devices.
+
+
+\vspace{4mm}
+
+\noindent\textbf{\large Problem Statement}
+
+\noindent Resource scheduling is a critical process to efficiently assign available resources to task requests, for high-performance, reliable, and cost-effective services [5], [22]. In the context of MEC, resources refer to limited computation, storage, and communication resources of edge and cloud servers. Typically, the overall scheduling process involves three layers of heterogeneous scheduling decisions, each of which performs in a specific collaboration manner,
+
+
+	
+
+
+\begin{itemize}
+	\item[--]\textbf{P1.\hspace{2mm}Devise-edge task offloading.}
+	Efficient task offloading is crucial to ensure seamless resource distribution in MEC. Device-edge task offloading enables devices to independently make decisions on offloading resource-intensive tasks to nearby edge servers, fostering efficient utilization of available resources.
+	
+	\item[--]\textbf{P2.\hspace{2mm}Edge-edge task offloading.} 
+	Task offloading leverages edge-edge collaborations, where tasks initially received by a local edge server can be offloaded to neighboring servers with underutilized resources, ensuring better resource utilization. The task offloading decision-making process focuses on efficiently distributing tasks among edge servers. Offloading tasks between edge servers requires communication resources and may introduce additional transmission delay, which should be taken into account when designing offloading strategies.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\vspace{5mm}
+
+\noindent\textbf{\large Research Methodology}
+\begin{enumerate} 
+	\item \textbf{Algorithm Design:} We will develop a Multi-Agent Deep Reinforcement Learning algorithm using techniques such as Proximal Policy Optimization (PPO) or Deep Q-Networks (DQN), with a focus on communication and collaboration between agents. 
+	\item \textbf{Simulation Environment:} A simulated MEC environment will be developed using Python or a suitable simulation platform, where mobile devices can offload tasks to edge servers under different network conditions.
+ \item \textbf{Key Challenges:} \begin{itemize} \item Coordination or competition between agents. \item Non-stationary environment due to actions of other agents. \item Scalability issues as the number of agents increases. \end{itemize} 
+\end{enumerate}
+
+
+
+
+
+\bibliographystyle{IEEEtranN} % IEEEtranN is the natbib compatible bst file
+% argument is your BibTeX string definitions and bibliography database(s)
+\bibliography{paper}
+
+
+
+
+\end{document}
+
+
