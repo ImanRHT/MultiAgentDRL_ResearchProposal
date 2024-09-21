@@ -115,6 +115,7 @@ sort&compress % as sort but in addition multiple numerical citations
 	
 	\textcolor{white}{i} \\ \LARGE Multi-Agent Deep Reinforcement Learning for Cooperative Resource Management in Partially Observable Mobile Edge Computing Environment \vspace{6mm}\\
 	
+	
 \end{center}
 %	\hrule
 %	\vspace{0.5pt}
@@ -142,64 +143,43 @@ sort&compress % as sort but in addition multiple numerical citations
 
 Mobile Edge Computing is emerging as a promising paradigm to enhance the computational capacity of mobile devices by offloading tasks to nearby edge servers. This paradigm aims to reduce latency, energy consumption, and improve Quality of Experience (QoE) for end-users. However, one of the major challenges in MEC is the efficient decision-making process for computation offloading, considering the dynamic nature of the network, user demands, and limited resources. Traditional offloading strategies, which often rely on heuristic or single-agent models, fail to capture the com- plexity and stochastic nature of modern MEC systems. 
 
+\small
+\newpage
 
-	
-\vspace{8mm}
+\noindent\textbf{\large Motivation:  }
+\noindent
+In MEC, each entity may need to make local decisions to improve network performance in dynamic and uncertain environments. Standard learning algorithms, such as single-agent Reinforcement Learning (RL) or Deep Reinforcement Learning (DRL), have recently been used to enable each network entity to learn an optimal decision-making policy adaptively through interaction with the unknown environment. However, these algorithms fail to model cooperation or competition among network entities, treating other entities simply as part of the environment, which can lead to non-stationarity issues. Multi-Agent Reinforcement Learning (MARL) enables each network entity to learn its optimal policy by observing both the environment and the policies of other entities while interacting with a shared or separate environment to achieve specific objectives.
 
-\noindent\textbf{\large Motivation}
-
-\vspace{1.5mm}
-
-The rapid growth of mobile applications, such as augmented reality, real-time gaming, and high-definition video streaming, has placed significant demands on the computational resources of mobile devices. While the processing power of these devices has improved, there remain significant limitations in battery life, processing speed, and memory capacity. Mobile Edge Computing (MEC) has emerged as a solution, enabling computation offloading to nearby edge servers to alleviate the processing burden on mobile devices. However, the challenge lies in determining how and when to offload computational tasks efficiently, especially in a dynamic network environment with varying resources and user demands. The decision-making process becomes more complex with the presence of multiple devices competing for limited edge resources. Current solutions often employ heuristic or single-agent approaches, which are not robust in highly dynamic and multi-user MEC environments. Multi-Agent Deep Reinforcement Learning (DRL) offers a promising avenue for addressing this challenge. By allowing multiple agents (mobile devices and edge servers) to autonomously learn and adapt their offloading strategies, it becomes possible to optimize system-wide performance metrics such as energy consumption, latency, and resource utilization. 
-
+%As a result, MARL can significantly improve the learning efficiency of the network entities, and it has been recently used to solve various issues in the emerging networks.
 
 
+%In multi-agent DRL, multiple agents interact with a shared or separate environment to achieve specific objectives. Each agent independently learns through trial and error while accounting for the actions and policies of other agents. Multiple agents interact with a shared or separate environment to achieve specific objectives. In mobile edge computing, each device might be an agent trying to optimize its own computation offloading strategy while considering the resource usage and strategies of other devices.
 
 
+\vspace{2mm}
 
-
-
-
-
- Multiple agents interact with a shared or separate environment to achieve specific objectives. Each agent independently learns through trial and error while accounting for the actions and policies of other agents. In mobile edge computing, each device might be an agent trying to optimize its own computation offloading strategy while considering the resource usage and strategies of other devices.
-
-
-\vspace{4mm}
-
-\noindent\textbf{\large Problem Statement}
-
-\noindent Resource scheduling is a critical process to efficiently assign available resources to task requests, for high-performance, reliable, and cost-effective services [5], [22]. In the context of MEC, resources refer to limited computation, storage, and communication resources of edge and cloud servers. Typically, the overall scheduling process involves three layers of heterogeneous scheduling decisions, each of which performs in a specific collaboration manner,
-
-
-	
-
-
+\noindent\textbf{\large Problem Statement: }
+\noindent
+Task offloading is a critical process to efficiently assign available resources to task requests, for high-performance, reliable, and cost-effective services [], []. In the MEC, the task offloading decision-making process focuses on efficiently distributing tasks among edge servers, where resources refer to limited computation, storage, and communication resources of edge and cloud servers. Typically, the offloading proceses involves two layers of heterogeneous decisions making prolems (\textbf{P1, P2}) as follow,
+%The task offloading decision-making process focuses on efficiently distributing tasks among edge servers. 
+\vspace{-2mm}
 \begin{itemize}
-	\item[--]\textbf{P1.\hspace{2mm}Devise-edge task offloading.}
-	Efficient task offloading is crucial to ensure seamless resource distribution in MEC. Device-edge task offloading enables devices to independently make decisions on offloading resource-intensive tasks to nearby edge servers, fostering efficient utilization of available resources.
-	
-	\item[--]\textbf{P2.\hspace{2mm}Edge-edge task offloading.} 
-	Task offloading leverages edge-edge collaborations, where tasks initially received by a local edge server can be offloaded to neighboring servers with underutilized resources, ensuring better resource utilization. The task offloading decision-making process focuses on efficiently distributing tasks among edge servers. Offloading tasks between edge servers requires communication resources and may introduce additional transmission delay, which should be taken into account when designing offloading strategies.
+\item\textbf{P1.\hspace{2mm}Devise-edge task offloading.} Enables devices to independently make decisions on offloading resource-intensive tasks to nearby edge servers, fostering efficient utilization of resources.\vspace{-2mm}
+\item\textbf{P2.\hspace{2mm}Edge-edge task offloading.} Leverages edge-edge collaborations, where tasks initially received by a local edge server can be offloaded to neighboring servers with underutilized resources, ensuring better resource utilization. %Offloading tasks between edge servers requires communication resources and may introduce additional transmission delay, which should be taken into account when designing offloading strategies.
 \end{itemize}
 
+\noindent\textbf{\large Problem Model: }
+\noindent
+The main problem can be formoulated as decomposation of sub-problems \textbf{P1} and \textbf{P2} as a \textbf{Decenteralized partially observable markove decision procsses (Dec-POMDP}), where multibe devices and edge servers interacting with each other by its own observation of environment, which is a part of main overall state. 
 
+\vspace{3mm}
 
-
-
-
-
-
-
-
-\vspace{5mm}
-
-\noindent\textbf{\large Research Methodology}
+\noindent\textbf{\large Research Methodology: }
 \begin{enumerate} 
-	\item \textbf{Algorithm Design:} We will develop a Multi-Agent Deep Reinforcement Learning algorithm using techniques such as Proximal Policy Optimization (PPO) or Deep Q-Networks (DQN), with a focus on communication and collaboration between agents. 
-	\item \textbf{Simulation Environment:} A simulated MEC environment will be developed using Python or a suitable simulation platform, where mobile devices can offload tasks to edge servers under different network conditions.
- \item \textbf{Key Challenges:} \begin{itemize} \item Coordination or competition between agents. \item Non-stationary environment due to actions of other agents. \item Scalability issues as the number of agents increases. \end{itemize} 
+\item \textbf{Algorithm Design:} Developing a Multi-Agent Deep Reinforcement Learning algorithm using techniques such as \textbf{Deep Deterministic Policy Gradiant (DDPG)} or \textbf{Dueling Deep Q-Networks (DDQN)}, with a focus on communication and collaboration, cordination or competitation between agents. \vspace{-1mm}
+\item \textbf{Simulation Environment:} A simulated MEC environment will be developed using Python or a suitable simulation platform, where mobile devices can offload tasks to edge servers and edge servers can distribute thier computation workloads, under different network conditions.\vspace{-1mm}
+\item \textbf{Key Challenges:} (a) Coordination or competition between agents. (b) Non-stationary environment due to actions of other agents.  (c) Scalability issues as the number of agents increases.
 \end{enumerate}
-
 
 
 

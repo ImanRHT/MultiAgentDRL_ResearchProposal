@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  21 SEP 2024 02:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.28)  22 SEP 2024 00:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -791,32 +791,37 @@ Package caption Info: End \AtBeginDocument code.
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 2
-00.
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 1
+67.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 )
-(./Research_Idea.bbl [2]) [3] (./Research_Idea.aux)
+Overfull \hbox (8.72894pt too wide) in paragraph at lines 167--168
+[]\OT1/bch/b/n/10.95 P1. Devise-edge task of-fload-ing. \OT1/bch/m/n/10.95 En-a
+bles de-vices to in-de-pen-dently make de-ci-sions on of-fload-ing resource-
+ []
+
+(./Research_Idea.bbl) [2] (./Research_Idea.aux)
 Package rerunfilecheck Info: File `Research_Idea.out' has not changed.
 (rerunfilecheck)             Checksum: EDE23595DCA8A4392503813D74F4CD13;94.
  ) 
 Here is how much of TeX's memory you used:
- 14069 strings out of 478994
- 209898 string characters out of 5858183
+ 14066 strings out of 478994
+ 209875 string characters out of 5858183
  517184 words of memory out of 5000000
- 31295 multiletter control sequences out of 15000+600000
- 423546 words of font info for 52 fonts, out of 8000000 for 9000
+ 31294 multiletter control sequences out of 15000+600000
+ 421615 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,74p,1343b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,5n,74p,865b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2021/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texl
 ive/2021/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive
 /2021/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb>
-Output written on Research_Idea.pdf (3 pages, 48706 bytes).
+Output written on Research_Idea.pdf (2 pages, 49226 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 44 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 
