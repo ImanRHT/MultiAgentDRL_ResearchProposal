@@ -113,74 +113,47 @@ sort&compress % as sort but in addition multiple numerical citations
 	
 	\vspace{-1mm}
 	
-	\textcolor{white}{i} \\ \LARGE Multi-Agent Deep Reinforcement Learning for Cooperative Resource Management in Partially Observable Mobile Edge Computing Environment \vspace{6mm}\\
+	\textcolor{white}{i} \\ \LARGE Multi-Agent Deep Reinforcement Learning for Cooperative Task Offloading in Partially Observable Mobile Edge Computing Environment \vspace{6mm}\\
 	
 	
 \end{center}
-%	\hrule
-%	\vspace{0.5pt}
-%	\hrule height 1pt
-
-
-
-\vspace{-8mm}
-
-\begin{abstract}
-	\vspace{-2mm}
-	\noindent
-	Mobile edge computing often suffers from the dynamic and unknown nature of the environment such as time-varying conditions, heterogeneous devices, and frequent communication requests, imposing significant challenges on improving system performance. To meet the rapidly growing demands of computation-intensive and time-sensitive applications, Reinforcement learning \cite{mnih2015human} has been proposed as an effective tool to establish low-latency and energy-efficient networks. RL enables network entities to interact with the environment and learn an optimal decision-making policy, usually modeled as a Markov decision process \cite{puterman2014markov}.
-\end{abstract}
-
-
-
-	
-\vspace{4mm}
-
-\noindent\large\textbf{Introduction}
-
-\vspace{1.5mm}
-\normalsize
-
-Mobile Edge Computing is emerging as a promising paradigm to enhance the computational capacity of mobile devices by offloading tasks to nearby edge servers. This paradigm aims to reduce latency, energy consumption, and improve Quality of Experience (QoE) for end-users. However, one of the major challenges in MEC is the efficient decision-making process for computation offloading, considering the dynamic nature of the network, user demands, and limited resources. Traditional offloading strategies, which often rely on heuristic or single-agent models, fail to capture the com- plexity and stochastic nature of modern MEC systems. 
-
-\small
-\newpage
+ \small
+\vspace{-5mm}
 
 \noindent\textbf{\large Motivation:  }
 \noindent
-In MEC, each entity may need to make local decisions to improve network performance in dynamic and uncertain environments. Standard learning algorithms, such as single-agent Reinforcement Learning (RL) or Deep Reinforcement Learning (DRL), have recently been used to enable each network entity to learn an optimal decision-making policy adaptively through interaction with the unknown environment. However, these algorithms fail to model cooperation or competition among network entities, treating other entities simply as part of the environment, which can lead to non-stationarity issues. Multi-Agent Reinforcement Learning (MARL) enables each network entity to learn its optimal policy by observing both the environment and the policies of other entities while interacting with a shared or separate environment to achieve specific objectives.
+In MEC, each entity may need to make local decisions to improve network performance in dynamic and uncertain environments. Standard learning algorithms, such as single-agent RL or DRL \cite{liao2023online}, \cite{huang2019deep}, have recently been used to enable each network entity to learn an optimal decision-making policy adaptively through interaction with the unknown environment. However, these algorithms fail to model cooperation or competition among network entities, treating other entities simply as part of the environment, which can lead to non-stationarity issues. MARL enables each network entity to learn its optimal policy by observing both the environment and the policies of other entities while interacting with a shared or separate environment to achieve specific objectives \cite{zhang2021multi}.
 
-%As a result, MARL can significantly improve the learning efficiency of the network entities, and it has been recently used to solve various issues in the emerging networks.
+%As a result, MARL can significantly improve the learning efficiency of network entities, and it has been recently used to solve various issues in emerging networks.
 
 
-%In multi-agent DRL, multiple agents interact with a shared or separate environment to achieve specific objectives. Each agent independently learns through trial and error while accounting for the actions and policies of other agents. Multiple agents interact with a shared or separate environment to achieve specific objectives. In mobile edge computing, each device might be an agent trying to optimize its own computation offloading strategy while considering the resource usage and strategies of other devices.
+%In multi-agent DRL, multiple agents interact with a shared or separate environment to achieve specific objectives. Each agent independently learns through trial and error while accounting for the actions and policies of other agents. Multiple agents interact with a shared or separate environment to achieve specific objectives. In mobile edge computing, each device might be an agent trying to optimize its computation offloading strategy while considering the resource usage and strategies of other devices.
 
 
 \vspace{2mm}
 
 \noindent\textbf{\large Problem Statement: }
 \noindent
-Task offloading is a critical process to efficiently assign available resources to task requests, for high-performance, reliable, and cost-effective services [], []. In the MEC, the task offloading decision-making process focuses on efficiently distributing tasks among edge servers, where resources refer to limited computation, storage, and communication resources of edge and cloud servers. Typically, the offloading proceses involves two layers of heterogeneous decisions making prolems (\textbf{P1, P2}) as follow,
+Task offloading is a critical process to efficiently assign available resources to task requests, for high-performance, reliable, and cost-effective services. In MEC, the decision-making process of task offloading focuses on efficiently distributing tasks among edge servers, where resources refer to limited computation, storage, and communication resources of edge and cloud servers. Typically, the offloading process involves two layers of heterogeneous decisions making problems (\textbf{P1, P2}) as follows,
 %The task offloading decision-making process focuses on efficiently distributing tasks among edge servers. 
 \vspace{-2mm}
 \begin{itemize}
-\item\textbf{P1.\hspace{2mm}Devise-edge task offloading.} Enables devices to independently make decisions on offloading resource-intensive tasks to nearby edge servers, fostering efficient utilization of resources.\vspace{-2mm}
-\item\textbf{P2.\hspace{2mm}Edge-edge task offloading.} Leverages edge-edge collaborations, where tasks initially received by a local edge server can be offloaded to neighboring servers with underutilized resources, ensuring better resource utilization. %Offloading tasks between edge servers requires communication resources and may introduce additional transmission delay, which should be taken into account when designing offloading strategies.
+	\item\textbf{P1.\hspace{2mm}Devise-edge task offloading.} Enables devices to independently make decisions on offloading resource-intensive tasks to nearby edge servers, fostering efficient utilization of resources.\vspace{-2mm}
+	\item\textbf{P2.\hspace{2mm}Edge-edge task offloading.} Leverages edge-edge collaborations, where tasks initially received by a local edge server can be offloaded to neighboring servers with underutilized resources. %Offloading tasks between edge servers require communication resources and may introduce additional transmission delay, which should be taken into account when designing offloading strategies.
 \end{itemize}
 
 \noindent\textbf{\large Problem Model: }
 \noindent
-The main problem can be formoulated as decomposation of sub-problems \textbf{P1} and \textbf{P2} as a \textbf{Decenteralized partially observable markove decision procsses (Dec-POMDP}), where multibe devices and edge servers interacting with each other by its own observation of environment, which is a part of main overall state. 
+The main problem can be formulated as the decomposition of sub-problems \textbf{P1} and \textbf{P2} as a \textbf{Decenteralized Partially Observable Markov Decision Processes (Dec-POMDP}) \cite{oliehoek2016concise}, where multiple devices and edge servers interacting with each other by its observation of the environment, which is a part of main overall state. 
 
 \vspace{3mm}
 
 \noindent\textbf{\large Research Methodology: }
 \begin{enumerate} 
-\item \textbf{Algorithm Design:} Developing a Multi-Agent Deep Reinforcement Learning algorithm using techniques such as \textbf{Deep Deterministic Policy Gradiant (DDPG)} or \textbf{Dueling Deep Q-Networks (DDQN)}, with a focus on communication and collaboration, cordination or competitation between agents. \vspace{-1mm}
-\item \textbf{Simulation Environment:} A simulated MEC environment will be developed using Python or a suitable simulation platform, where mobile devices can offload tasks to edge servers and edge servers can distribute thier computation workloads, under different network conditions.\vspace{-1mm}
-\item \textbf{Key Challenges:} (a) Coordination or competition between agents. (b) Non-stationary environment due to actions of other agents.  (c) Scalability issues as the number of agents increases.
+	\item \textbf{Algorithm Design:} Developing a \textbf{MARL} algorithm using techniques such as \textbf{Deep Deterministic Policy Gradient (DDPG)} \cite{lillicrap2015continuous} or \textbf{Dueling Double Deep Q-Networks (D3QN)} \cite{van2016deep}, with a focus on communication and collaboration, coordination or competition between agents. \vspace{-1mm}
+	\item \textbf{Simulation Environment:} A simulated MEC environment will be developed using Python or a suitable simulation platform, where mobile devices can offload tasks to edge servers and edge servers can distribute their computation workloads, under different network conditions.\vspace{-1mm}
+	\item \textbf{Key Challenges:} (a) Coordination or competition between agents. (b) The non-stationary environment due to actions of other agents.  (c) Scalability issues as the number of agents increases.
 \end{enumerate}
-
 
 
 
